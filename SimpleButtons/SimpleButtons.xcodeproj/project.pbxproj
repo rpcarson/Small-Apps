@@ -345,6 +345,7 @@
 				INFOPLIST_FILE = SimpleButtons/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -355,6 +356,7 @@
 				INFOPLIST_FILE = SimpleButtons/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -411,6 +413,7 @@
 				5BFD88B91AF7F3C70064A4EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5BFD88BA1AF7F3C70064A4EF /* Build configuration list for PBXNativeTarget "SimpleButtonsTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +422,7 @@
 				5BFD88BC1AF7F3C70064A4EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
