@@ -11,7 +11,10 @@ import UIKit
 class ViewController: UIViewController {
     
     
+       var view2 = UIView(frame: CGRectMake(150, 150, 100, 100))
     
+    view2.addSubview(view2)
+      view2.backgroundColor = UIColor.redColor()
     
     
     override func viewDidLoad() {
@@ -28,6 +31,22 @@ class ViewController: UIViewController {
             //  " as " is a way to change type hierarchy downwards
             
             
+            
+//            cocoTouchAdventuresTwoTheReckoning
+//            cocobox
+//            cocorounded
+            
+           
+            func differentShapes() {
+                
+                
+                
+                
+            }
+            
+            
+            
+            
             var box = cocoTouchAdventuresTwoTheReckoning()
 
             
@@ -38,9 +57,15 @@ class ViewController: UIViewController {
             box.center = location
         }
         
-    }
     
     
+    
+    
+    
+  
+   
+    
+  
 }
 
 
@@ -49,8 +74,7 @@ class ViewController: UIViewController {
 
 
 
-//        var view2 = UIView(frame: CGRectMake(150, 150, 100, 100))
-//        view2.backgroundColor = UIColor.redColor()
+    
 //
 //
 //        var view3 = UIView(frame: CGRectMake(200   , 200, 100, 100))
@@ -64,7 +88,7 @@ class ViewController: UIViewController {
 //
 //        view.addSubview(view5)
 //        view.addSubview(view1)
-//        view.addSubview(view2)   ;  view.addSubview(view3)
+        
 
 
 //    self - refers to object we are currenty working with
