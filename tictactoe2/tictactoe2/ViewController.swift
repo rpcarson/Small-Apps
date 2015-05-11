@@ -14,26 +14,6 @@ class ViewController: UIViewController {
     
     
     
-    @IBAction func reStart(sender: UIButton) {
-        
-       
-        
-        if winnerIsFound == false {
-            
-            println("placholder")
-            
-        }
-        
-        
-        println("wtf how do i reset game")
-        loadView()
-      playAgain.hidden = true
-        
-    }
- 
-    
-    
-    
     
     @IBOutlet weak var playerIndicator: UILabel!
         
@@ -69,6 +49,10 @@ class ViewController: UIViewController {
     
     
     @IBAction func buttonPressed(sender: ticbutton) {
+        
+ 
+        
+        
         
         
         
@@ -209,10 +193,32 @@ class ViewController: UIViewController {
     }
     
     
-   
     
-    
-    
-    
-}
 
+    
+    @IBAction func reStart(sender: UIButton) {
+        
+        
+        println("wtf how do i reset game")
+        loadView()
+        playAgain.hidden = true
+        
+        winnerIsFound = false
+        
+        spaces = [
+        
+        [nil, nil, nil],
+        [nil, nil, nil],
+        [nil, nil, nil]
+        
+        ]
+        
+    
+
+        
+    }
+
+   
+
+
+}
