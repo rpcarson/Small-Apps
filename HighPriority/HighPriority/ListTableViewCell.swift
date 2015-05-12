@@ -12,9 +12,9 @@ import UIKit
 
 let priorityColors = [
 
-UIColor.redColor(),
-UIColor.orangeColor(),
-UIColor.yellowColor(),
+UIColor(red:0.99, green:0.2, blue:0.24, alpha:1),
+UIColor(red:0.99, green:0.46, blue:0.32, alpha:1),
+UIColor(red:0.99, green:0.68, blue:0.42, alpha:1),
 
 ]
 
@@ -72,8 +72,7 @@ class ListTableViewCell: UITableViewCell {
         if itemInfo["completed"] as! Bool {
             
             itemStrikeThrough.hidden = false
-            backgroundColor = UIColor.lightGrayColor()
-
+            backgroundColor = UIColor(red:0.32, green:0.32, blue:0.32, alpha:1)
             
         } else {
             
