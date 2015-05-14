@@ -10,9 +10,13 @@ import UIKit
 
 class FriendTableViewController: UITableViewController {
     
+
+    @IBOutlet weak var reposButton: UIButton!
+    @IBOutlet weak var gistsButton: UIButton!
+    @IBOutlet weak var friendNameLabel: UILabel!
     
+    @IBOutlet weak var profileImage: UIImageView!
     
-    var friendIndex: Int!
     
     
     @IBOutlet weak var nameField: UITextField!
@@ -75,7 +79,7 @@ class FriendTableViewController: UITableViewController {
 //   profileButton.layer.cornerRadius = 8
    
     
-    addFVisual.layer.cornerRadius = 8
+   
     
     }
     
@@ -91,7 +95,7 @@ class FriendTableViewController: UITableViewController {
                
         if let friendInfo = GitHubRequest.getInfoWithEndpoint(endpoint) as? [String:AnyObject?] {
         
-        
+        lastUserCreated = nameField.text
         friends.insert(friendInfo, atIndex: 0)
         tableView.reloadData()
         
@@ -126,7 +130,7 @@ class FriendTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("friendCell", forIndexPath: indexPath) as! UITableViewCell
         
-        cell.textLabel?.text = friends[indexPath.row]["name"] as? String
+//        cell.textLabel?.text = friends[indexPath.row]["name"] as? String
 
         // Configure the cell...
         
@@ -138,8 +142,8 @@ class FriendTableViewController: UITableViewController {
         
         let image = UIImage(data: imageData!)
         
-        cell.imageView!.image = image
-        
+//        cell.imageView!.image = image
+//    
         
 
         return cell
@@ -190,6 +194,9 @@ class FriendTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
+        if segue.identifier == "reposSegue" {
+        
+        
         var reposTVC = segue.destinationViewController as! ReposTableViewController
         
         var reposButton = sender as! UIButton
@@ -198,6 +205,8 @@ class FriendTableViewController: UITableViewController {
         
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
+    }
+        
     }
     
 
