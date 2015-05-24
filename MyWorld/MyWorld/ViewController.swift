@@ -97,15 +97,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
 //
 //                            }
                         
-                        for (index, category) in enumerate(categories as! [[String:AnyObject]]) {
-                            
-                            if let categoryInfo = category["name"] as? [String:AnyObject] {
-                                
-                                categoryName = category["name"] as? String
-                                
-                            }
-                            
-                        }
+//                        for (index, category) in enumerate(categories as! [[String:AnyObject]]) {
+//                            
+//                            if let categoryInfo = category["name"] as? [String:AnyObject] {
+//                                
+//                                categoryName = category["name"] as? String
+//                                
+//                            }
+//                            
+//                        }
                         
                         
                         

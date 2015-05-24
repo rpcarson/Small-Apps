@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C2055" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aJp-wK-ep9">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -49,30 +50,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSX-xi-2gI">
-                                <rect key="frame" x="66" y="238" width="196" height="94"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Address Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSX-xi-2gI">
+                                <rect key="frame" x="101" y="0.0" width="110" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Address" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Yl-KF-A9E">
-                                <rect key="frame" x="66" y="235" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Category" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="11y-Vc-K3p">
+                                <rect key="frame" x="96" y="49" width="63" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Category" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="11y-Vc-K3p">
-                                <rect key="frame" x="90" y="51" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbz-5g-XZY">
-                                <rect key="frame" x="80" y="89" width="117" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbz-5g-XZY">
+                                <rect key="frame" x="96" y="74" width="117" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bNB-aY-iFL">
+                                <rect key="frame" x="76" y="50" width="12" height="0.0"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="12" id="b4X-Pk-mQE"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDC-Xy-ZEY">
+                                <rect key="frame" x="101" y="124" width="150" height="5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="hX4-3p-jW1"/>
+                                    <constraint firstAttribute="width" constant="150" id="nyB-15-KUA"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Yl-KF-A9E">
+                                <rect key="frame" x="96" y="148" width="57" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bNB-aY-iFL" firstAttribute="top" secondItem="i9z-X0-pdK" secondAttribute="bottom" constant="30" id="19R-FZ-INB"/>
+                            <constraint firstItem="BDC-Xy-ZEY" firstAttribute="leading" secondItem="bNB-aY-iFL" secondAttribute="trailing" constant="13" id="2v4-3r-FTZ"/>
+                            <constraint firstItem="11y-Vc-K3p" firstAttribute="leading" secondItem="bNB-aY-iFL" secondAttribute="trailing" constant="8" id="6bg-Ll-LMF"/>
+                            <constraint firstItem="Lbz-5g-XZY" firstAttribute="leading" secondItem="bNB-aY-iFL" secondAttribute="trailing" constant="8" id="DiC-Ej-bKp"/>
+                            <constraint firstItem="BDC-Xy-ZEY" firstAttribute="top" secondItem="Lbz-5g-XZY" secondAttribute="bottom" constant="29" id="QP3-S3-f4x"/>
+                            <constraint firstItem="1Yl-KF-A9E" firstAttribute="leading" secondItem="bNB-aY-iFL" secondAttribute="trailing" constant="8" id="RoF-zB-K5h"/>
+                            <constraint firstItem="1Yl-KF-A9E" firstAttribute="top" secondItem="BDC-Xy-ZEY" secondAttribute="bottom" constant="19" id="hxA-l6-bZN"/>
+                            <constraint firstItem="11y-Vc-K3p" firstAttribute="top" secondItem="i9z-X0-pdK" secondAttribute="bottom" constant="29" id="j9X-4s-4pe"/>
+                            <constraint firstItem="ZSX-xi-2gI" firstAttribute="leading" secondItem="bNB-aY-iFL" secondAttribute="trailing" constant="13" id="poy-Q8-oSP"/>
+                            <constraint firstItem="bNB-aY-iFL" firstAttribute="leading" secondItem="07g-Be-3tK" secondAttribute="leadingMargin" constant="60" id="r0L-23-sui"/>
+                            <constraint firstItem="Lbz-5g-XZY" firstAttribute="top" secondItem="11y-Vc-K3p" secondAttribute="bottom" constant="8" id="rvw-n8-5w4"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="addressLabel" destination="ZSX-xi-2gI" id="0rw-NT-Ixi"/>
