@@ -10,6 +10,8 @@ import UIKit
 
 class VenuesViewController: UIViewController {
 
+//    var addressLabel: UILabel!
+    
     
    @IBOutlet weak var categoriesLabel: UILabel!
     
@@ -23,7 +25,8 @@ class VenuesViewController: UIViewController {
        
         addressLabel.text = addressInfo
         categoriesLabel.text = categoryName
-    
+    addressLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping 
+        addressLabel.numberOfLines = 0
     
     }
 

@@ -120,9 +120,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                             
                             self.myMapView.addAnnotation(annotation)
                             
-                            addressInfo = locationInfo["address"] as? String
-                            
+                            let address = locationInfo["address"] as? String
+                            let country = locationInfo["country"] as? String
+                            let state = locationInfo["state"] as? String
+                            let city = locationInfo["city"] as? String
           
+//                            VenuesViewController.addressLabel.text 
+                            
+                            addressInfo = locationInfo["country"] as? String
+                            
+//                            "\(address) \(city) \(state) \(country)"
+                            
                             
                         }
                         
