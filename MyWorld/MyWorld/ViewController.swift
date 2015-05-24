@@ -9,9 +9,17 @@
 import UIKit
 import MapKit
 
+
+public var addressInfo = String?("nothing")
+public var categoryName = String?("nothing")
+
+
+
 class MyAnnotation : MKPointAnnotation {
     
     var venueIndex: Int!
+    
+
     
 }
 
@@ -20,11 +28,16 @@ class MyAnnotation : MKPointAnnotation {
 class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     
+   
+    
     @IBOutlet weak var myMapView: MKMapView!
     
     var elManager = CLLocationManager()
     
     var elVenues: [[String:AnyObject]] = []
+    
+    var elCategories: [[String:AnyObject]] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +52,27 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         elManager.startUpdatingLocation()
         
+       
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
+        navigationController?.navigationBar.barTintColor = UIColor(red:1, green:0.76, blue:0.21, alpha:1)
+        
+        
+        
+//        let backItem = UIBarButtonItem(title: "Custom Text HERE", style: UIBarButtonItemStyle.Plain, target: navigationController, action: nil)
+//        navigationnavigationItem.backBarButtonItem = backItem
+        
+        
+//        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
+        
+        navigationItem.title = "Venues"
+        
+        
+        
+      
+        
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
@@ -48,12 +82,32 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             println("latitude \(location.coordinate.latitude) longitude \(location.coordinate.longitude)")
             
             requestVenuesWithLocation(location, completion: { (venues) -> () in
-                
+            
                 self.elVenues = venues as! [[String:AnyObject]]
+                
+//                self.elCategories = categories as! [[String:Anyobject]]
                 
                 for (index, venue) in enumerate(venues as! [[String:AnyObject]]) {
                     
                     if let locationInfo = venue["location"] as? [String:AnyObject]{
+                        
+//                                         if let categoriesInfo = venue["categories"] as? [[String:AnyObject]] {
+//
+//                                categoryName = categoriesInfo["name"]
+//
+//                            }
+                        
+                        for (index, category) in enumerate(categories as! [[String:AnyObject]]) {
+                            
+                            if let categoryInfo = category["name"] as? [String:AnyObject] {
+                                
+                                categoryName = category["name"] as? String
+                                
+                            }
+                            
+                        }
+                        
+                        
                         
                         if let lat = locationInfo["lat"] as? Double, let lng = locationInfo["lng"] as? Double {
                             
@@ -66,6 +120,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                             
                             self.myMapView.addAnnotation(annotation)
                             
+                            addressInfo = locationInfo["address"] as? String
+                            
+          
+                            
                         }
                         
                     }
@@ -76,7 +134,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             
             elManager.stopUpdatingLocation()
         }
-        
         
         
     }
@@ -152,7 +209,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         var venue = elVenues[sender.tag]
         
-        var detailVC = UIViewController()
+         var detailVC = storyboard?.instantiateViewControllerWithIdentifier("VenuesViewController") as! VenuesViewController
         
         var box = UIView(frame: CGRectMake(20, 20, 100, 100))
         box.backgroundColor = UIColor.blueColor()   
@@ -160,10 +217,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         navigationController?.pushViewController(detailVC, animated: true)
         
         detailVC.view.backgroundColor = UIColor.whiteColor()
-        
         detailVC.navigationItem.title = venue["name"] as? String
+       
+        
         
         println("button clicked")
+        view.setNeedsDisplay()  
         
     }
     

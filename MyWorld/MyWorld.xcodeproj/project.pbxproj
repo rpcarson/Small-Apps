@@ -13,6 +13,7 @@
 		5B0D57D31B0E15E800528D04 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B0D57D21B0E15E800528D04 /* Images.xcassets */; };
 		5B0D57D61B0E15E800528D04 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B0D57D41B0E15E800528D04 /* LaunchScreen.xib */; };
 		5B0D57E21B0E15E800528D04 /* MyWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0D57E11B0E15E800528D04 /* MyWorldTests.swift */; };
+		5B6C267B1B0FA12B005E9268 /* VenuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6C267A1B0FA12B005E9268 /* VenuesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		5B0D57DB1B0E15E800528D04 /* MyWorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyWorldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B0D57E01B0E15E800528D04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B0D57E11B0E15E800528D04 /* MyWorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorldTests.swift; sourceTree = "<group>"; };
+		5B6C267A1B0FA12B005E9268 /* VenuesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				5B0D57CB1B0E15E800528D04 /* AppDelegate.swift */,
 				5B0D57CD1B0E15E800528D04 /* ViewController.swift */,
+				5B6C267A1B0FA12B005E9268 /* VenuesViewController.swift */,
 				5B0D57CF1B0E15E800528D04 /* Main.storyboard */,
 				5B0D57D21B0E15E800528D04 /* Images.xcassets */,
 				5B0D57D41B0E15E800528D04 /* LaunchScreen.xib */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B0D57CE1B0E15E800528D04 /* ViewController.swift in Sources */,
+				5B6C267B1B0FA12B005E9268 /* VenuesViewController.swift in Sources */,
 				5B0D57CC1B0E15E800528D04 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +413,7 @@
 				5B0D57E71B0E15E800528D04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B0D57E81B0E15E800528D04 /* Build configuration list for PBXNativeTarget "MyWorldTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				5B0D57EA1B0E15E800528D04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
