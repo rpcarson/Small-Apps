@@ -11,11 +11,11 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="I6v-yO-iXd">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QgE-ey-Ccp">
-                            <size key="itemSize" width="102" height="86"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BPY-3o-ZCc">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="albumCell" id="7OR-FQ-gtD" customClass="AlbumCollectionViewCell" customModule="AlbumArt" customModuleProvider="target">
@@ -38,6 +38,23 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sectionHeader" id="cZd-7N-iOa">
+                            <rect key="frame" x="0.0" y="64" width="600" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <searchBar contentMode="redraw" misplaced="YES" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="syl-Tq-4QF">
+                                    <rect key="frame" x="0.0" y="3" width="600" height="44"/>
+                                    <color key="barTintColor" red="0.8865806502525253" green="0.044468186336743758" blue="0.03473924862290282" alpha="1" colorSpace="calibratedRGB"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="syl-Tq-4QF" secondAttribute="trailing" id="JUh-so-3gE"/>
+                                <constraint firstItem="syl-Tq-4QF" firstAttribute="leading" secondItem="cZd-7N-iOa" secondAttribute="leading" id="Wu8-bo-fnV"/>
+                                <constraint firstItem="syl-Tq-4QF" firstAttribute="top" secondItem="cZd-7N-iOa" secondAttribute="top" id="qEA-w2-ftY"/>
+                                <constraint firstAttribute="bottom" secondItem="syl-Tq-4QF" secondAttribute="bottom" id="xxv-et-Xx0"/>
+                            </constraints>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="svd-WC-WmM" id="ikY-db-WwG"/>
                             <outlet property="delegate" destination="svd-WC-WmM" id="PnR-UX-9Ru"/>
@@ -47,7 +64,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HlS-mW-TyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1218" y="302"/>
+            <point key="canvasLocation" x="1220" y="317"/>
         </scene>
         <!--Album Detail Controller-->
         <scene sceneID="mOt-MJ-fkn">

@@ -15,7 +15,7 @@ let itunesAPI = "https://itunes.apple.com/search"
 let itunesLookupAPI = "https://itunes.apple.com/lookup"
 
 
-class AlbumCollectionViewController: UICollectionViewController {
+class AlbumCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     var albums: [[String:AnyObject]] = []
     
@@ -45,7 +45,18 @@ class AlbumCollectionViewController: UICollectionViewController {
                 
         }
         
+        
+        
         // Do any additional setup after loading the view.
+    }
+    
+    override func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        
+        let header = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "sectionHeader", forIndexPath: indexPath) as! UICollectionReusableView
+        
+        
+        return header
+    
     }
     
     override func didReceiveMemoryWarning() {
