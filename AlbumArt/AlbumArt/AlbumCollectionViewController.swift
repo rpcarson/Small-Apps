@@ -11,12 +11,15 @@ import UIKit
 import AFNetworking
 
 let reuseIdentifier = "albumCell"
+let itunesAPI = "https://itunes.apple.com/search"
+let itunesLookupAPI = "https://itunes.apple.com/lookup"
+
 
 class AlbumCollectionViewController: UICollectionViewController {
     
     var albums: [[String:AnyObject]] = []
     
-    let itunesAPI = "https://itunes.apple.com/search"
+    
     
     
     override func viewDidLoad() {
@@ -29,7 +32,7 @@ class AlbumCollectionViewController: UICollectionViewController {
         
         var requestManager = AFHTTPRequestOperationManager()
         
-        requestManager.GET(itunesAPI + "?entity=album&term=DaftPunk", parameters: nil, success: { (request, data) -> Void in
+        requestManager.GET(itunesAPI + "?entity=album&term=DimmuBorgir", parameters: nil, success: { (request, data) -> Void in
             
             let info = data as! [String:AnyObject]
             
@@ -110,6 +113,20 @@ class AlbumCollectionViewController: UICollectionViewController {
         return cell
     }
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let cell = sender as! AlbumCollectionViewCell
+        if let indexPath = collectionView?.indexPathForCell(cell) {
+            
+            let albumInfo = albums[indexPath.item]
+            
+            let detailVC = segue.destinationViewController as! AlbumDetailViewController
+            
+            detailVC.albumInfo = albumInfo
+            
+        }
+        
+        
+    }
     
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B5A02EF1B18E83100587113 /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A02EE1B18E83100587113 /* TrackTableViewCell.swift */; };
 		5B9D14BB1B189BA900597538 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9D14BA1B189BA900597538 /* AppDelegate.swift */; };
 		5B9D14BD1B189BA900597538 /* AlbumDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9D14BC1B189BA900597538 /* AlbumDetailViewController.swift */; };
 		5B9D14C01B189BA900597538 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9D14BE1B189BA900597538 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		296C9DA52BF03AC21A3C6285 /* Pods-AlbumArt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbumArt.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlbumArt/Pods-AlbumArt.release.xcconfig"; sourceTree = "<group>"; };
+		5B5A02EE1B18E83100587113 /* TrackTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
 		5B6164F71B18A8AC001513D0 /* AlbumArt-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AlbumArt-Bridging-Header.h"; sourceTree = "<group>"; };
 		5B9D14B51B189BA900597538 /* AlbumArt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlbumArt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9D14B91B189BA900597538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				5B9D14BA1B189BA900597538 /* AppDelegate.swift */,
 				5B9D14BC1B189BA900597538 /* AlbumDetailViewController.swift */,
 				5B9D14BE1B189BA900597538 /* Main.storyboard */,
+				5B5A02EE1B18E83100587113 /* TrackTableViewCell.swift */,
 				5B9D14DA1B189EA200597538 /* AlbumCollectionViewController.swift */,
 				5B9D14DC1B189EBF00597538 /* AlbumCollectionViewCell.swift */,
 				5B9D14DE1B18A20F00597538 /* PodFile */,
@@ -299,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B5A02EF1B18E83100587113 /* TrackTableViewCell.swift in Sources */,
 				5B9D14DD1B189EBF00597538 /* AlbumCollectionViewCell.swift in Sources */,
 				5B9D14DB1B189EA200597538 /* AlbumCollectionViewController.swift in Sources */,
 				5B9D14BD1B189BA900597538 /* AlbumDetailViewController.swift in Sources */,
