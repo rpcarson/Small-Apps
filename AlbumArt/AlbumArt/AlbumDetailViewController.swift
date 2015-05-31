@@ -28,6 +28,9 @@ class AlbumDetailViewController: UIViewController, UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        albumName.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        albumName.numberOfLines = 0
+        
         tracksTableView.delegate = self
         tracksTableView.dataSource = self
         

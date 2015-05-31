@@ -78,7 +78,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="none" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="KVs-wg-RSk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="none" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KVs-wg-RSk">
                                 <rect key="frame" x="16" y="72" width="568" height="101"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -102,15 +102,21 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1c-dt-52b">
                                                     <rect key="frame" x="8" y="0.0" width="36" height="43"/>
-                                                    <state key="normal" title="🎱">
+                                                    <state key="normal" title=" ▶️">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="toggleSong:" destination="otV-ZF-Ki4" eventType="touchUpInside" id="ZOa-hC-qBY"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYp-36-Ttf">
+                                                    <rect key="frame" x="52" y="7" width="30" height="30"/>
+                                                    <state key="normal" title="🔳">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koV-wE-y6V">
-                                                    <rect key="frame" x="52" y="3" width="129" height="38"/>
+                                                    <rect key="frame" x="90" y="3" width="129" height="38"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -126,9 +132,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="KVs-wg-RSk" firstAttribute="leading" secondItem="Dww-VN-v9f" secondAttribute="leading" constant="16" id="0kE-Oa-BGf"/>
                             <constraint firstItem="oAY-Fq-Vey" firstAttribute="leading" secondItem="Dww-VN-v9f" secondAttribute="leading" id="7tD-dC-BUC"/>
                             <constraint firstItem="dnO-Y6-rTg" firstAttribute="top" secondItem="oAY-Fq-Vey" secondAttribute="bottom" id="Ovl-jv-tcP"/>
                             <constraint firstItem="oAY-Fq-Vey" firstAttribute="top" secondItem="bdW-k2-uht" secondAttribute="bottom" constant="18" id="fMC-q0-UpO"/>
+                            <constraint firstAttribute="trailing" secondItem="KVs-wg-RSk" secondAttribute="trailing" constant="16" id="iak-QU-DdV"/>
                             <constraint firstAttribute="trailing" secondItem="oAY-Fq-Vey" secondAttribute="trailing" id="jdx-fu-0Iv"/>
                         </constraints>
                     </view>
