@@ -109,6 +109,12 @@
                                                         <action selector="toggleSong:" destination="otV-ZF-Ki4" eventType="touchUpInside" id="ZOa-hC-qBY"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koV-wE-y6V">
+                                                    <rect key="frame" x="151" y="3" width="129" height="38"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYp-36-Ttf">
                                                     <rect key="frame" x="52" y="7" width="30" height="30"/>
                                                     <state key="normal" title="🔳">
@@ -118,12 +124,15 @@
                                                         <action selector="stopButton:" destination="otV-ZF-Ki4" eventType="touchUpInside" id="tVu-xe-Dvc"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koV-wE-y6V">
-                                                    <rect key="frame" x="90" y="3" width="129" height="38"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQa-oh-Adx">
+                                                    <rect key="frame" x="90" y="7" width="46" height="30"/>
+                                                    <state key="normal" title="search">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="jtz-Zp-Ia9" kind="show" id="NqD-t9-mhd"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
@@ -153,6 +162,52 @@
             </objects>
             <point key="canvasLocation" x="1890" y="302"/>
         </scene>
+        <!--Some Buttons View Controller-->
+        <scene sceneID="8e2-pf-QUB">
+            <objects>
+                <viewController id="jtz-Zp-Ia9" customClass="SomeButtonsViewController" customModule="AlbumArt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ndo-Fj-Wur"/>
+                        <viewControllerLayoutGuide type="bottom" id="HDp-1z-Tw8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HzV-Md-VOJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nm8-rK-UxW">
+                                <rect key="frame" x="16" y="28" width="34" height="30"/>
+                                <state key="normal" title="back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="lR4-eo-STq" kind="show" id="Pf7-PL-xJv"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="97b-De-0Mg">
+                                <rect key="frame" x="177" y="117" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OK4-6K-bJ5">
+                                <rect key="frame" x="297" y="116" width="92" height="30"/>
+                                <state key="normal" title="search artists">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchArtistButton:" destination="jtz-Zp-Ia9" eventType="touchUpInside" id="4xt-fg-aE5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchField" destination="97b-De-0Mg" id="Qga-nU-YfZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q2C-8z-kT8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1823" y="1031"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ngI-HX-nzf">
             <objects>
@@ -172,4 +227,7 @@
             <point key="canvasLocation" x="557" y="302"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Pf7-PL-xJv"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -10,6 +10,9 @@ import UIKit
 //import DatShit
 import AFNetworking
 
+
+var arteests = artistSearch
+
 let reuseIdentifier = "albumCell"
 let itunesAPI = "https://itunes.apple.com/search"
 let itunesLookupAPI = "https://itunes.apple.com/lookup"
@@ -41,20 +44,20 @@ class AlbumCollectionViewController: UICollectionViewController,  UICollectionVi
         
         
         
-        var requestManager = AFHTTPRequestOperationManager()
-        
-        requestManager.GET(itunesAPI + "?entity=album&term=DimmuBorgir", parameters: nil, success: { (request, data) -> Void in
-            
-            let info = data as! [String:AnyObject]
-            
-            self.albums = info["results"] as! [[String:AnyObject]]
-            self.collectionView?.reloadData()
-            
-            }) { (request, error) -> Void in
-                
-                println(error)
-                
-        }
+//        var requestManager = AFHTTPRequestOperationManager()
+//        
+//        requestManager.GET(itunesAPI + "?entity=album&term=\(arteests)", parameters: nil, success: { (request, data) -> Void in
+//            
+//            let info = data as! [String:AnyObject]
+//            
+//            self.albums = info["results"] as! [[String:AnyObject]]
+//            self.collectionView?.reloadData()
+//            
+//            }) { (request, error) -> Void in
+//                
+//                println(error)
+//                
+//        }
         
         
         
@@ -148,6 +151,27 @@ class AlbumCollectionViewController: UICollectionViewController,  UICollectionVi
             
         }
         
+        
+    }
+   
+    
+  func searchForArtists() {
+        
+        var requestManager = AFHTTPRequestOperationManager()
+        
+        requestManager.GET(itunesAPI + "?entity=album&term=\(arteests)", parameters: nil, success: { (request, data) -> Void in
+            
+            let info = data as! [String:AnyObject]
+            
+            self.albums = info["results"] as! [[String:AnyObject]]
+            self.collectionView?.reloadData()
+            
+            }) { (request, error) -> Void in
+                
+                println(error)
+                
+        }
+
         
     }
     
