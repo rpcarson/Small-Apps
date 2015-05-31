@@ -13,6 +13,11 @@ import AVFoundation
 
 class AlbumDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TrackTableViewCellDelegate {
     
+  
+    
+    
+    
+    
     
     var albumInfo: [String:AnyObject]!
     
@@ -27,6 +32,8 @@ class AlbumDetailViewController: UIViewController, UITableViewDataSource, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         albumName.lineBreakMode = NSLineBreakMode.ByWordWrapping
         albumName.numberOfLines = 0
@@ -86,6 +93,8 @@ class AlbumDetailViewController: UIViewController, UITableViewDataSource, UITabl
     
     func playSongWithURL(url: String) {
         
+        
+        
         player?.stop()
         
         if let url = NSURL(string: url) {
@@ -108,6 +117,13 @@ class AlbumDetailViewController: UIViewController, UITableViewDataSource, UITabl
         player?.stop()
         
     }
+    
+    
+    func stopPlaying() {
+        
+        player?.stop() 
+    }
+    
     
 }
 

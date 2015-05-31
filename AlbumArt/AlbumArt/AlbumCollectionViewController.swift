@@ -15,11 +15,22 @@ let itunesAPI = "https://itunes.apple.com/search"
 let itunesLookupAPI = "https://itunes.apple.com/lookup"
 
 
-class AlbumCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+
+
+class AlbumCollectionViewController: UICollectionViewController,  UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
+    
+  
+
+ 
+  
+    
+    
+    
     
     var albums: [[String:AnyObject]] = []
     
     
+ 
     
     
     override func viewDidLoad() {
