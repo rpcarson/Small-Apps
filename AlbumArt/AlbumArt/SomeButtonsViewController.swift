@@ -26,15 +26,21 @@ class SomeButtonsViewController: UIViewController {
     
     @IBAction func searchArtistButton(sender: UIButton) {
 
+        artistSearch = searchField.text
+        
+        println(searchField.text)
+        
+        
        println("uhoh")
     
+     
     
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        artistSearch = searchField.text 
+//        artistSearch = searchField.text 
 
         // Do any additional setup after loading the view.
     }
