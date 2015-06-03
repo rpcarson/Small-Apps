@@ -4,14 +4,14 @@
 //
 //  Created by Reed Carson on 6/2/15.
 //  Copyright (c) 2015 Reed Carson. All rights reserved.
-// (>^_^)> ~~~~~~~~  o-q(-o-<)zzzz
+// (>^_^)> ~~~~~~~~ o-(-o-q)zzzz
 
 #import "TableViewController.h"
 #import <CommonCrypto/CommonDigest.h>
 
-#define API_BASE @"http://gateway.marvel.com/v1/public/"
+#define API_BASE    @"http://gateway.marvel.com/v1/public/"
 
-#define PUBLIC_KEY @"0ec99ebc6153087d7d43814a46caa615"
+#define PUBLIC_KEY  @"0ec99ebc6153087d7d43814a46caa615"
 
 #define PRIVATE_KEY @"88648200c83c3b105879541abe038674a7bcfc76"
 
