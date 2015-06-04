@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="O3m-Ti-7uM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Camera View Controller-->
@@ -26,7 +27,6 @@
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="imageVC" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
@@ -36,6 +36,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LPq-jc-AGL">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dcp-hf-DRO">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="500"/>
                             </imageView>
@@ -69,23 +72,54 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XvK-ZJ-JJD">
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="x">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBack:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="j6J-PX-LAk"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="afQ-6h-Rf2">
+                                <rect key="frame" x="14" y="462" width="572" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QTh-vw-t3w"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" red="1" green="0.0" blue="0.14858211595246473" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="maximumTrackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="thumbTintColor" red="0.57331049413816459" green="1" blue="0.53045686379646273" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="filterIntensity:" destination="vXZ-lx-hvc" eventType="valueChanged" id="ztK-Ar-ete"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="LPq-jc-AGL" secondAttribute="bottom" id="0JU-6g-JBy"/>
+                            <constraint firstItem="afQ-6h-Rf2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="7sf-Za-2zN"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="nJ2-eS-duJ" secondAttribute="bottom" id="9I6-gW-rn6"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="dcp-hf-DRO" secondAttribute="bottom" constant="100" id="DjA-Kf-uaE"/>
                             <constraint firstItem="nJ2-eS-duJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="G9A-bS-Ijz"/>
+                            <constraint firstItem="LPq-jc-AGL" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="LWh-9o-9ut"/>
+                            <constraint firstItem="LPq-jc-AGL" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Q4Y-wR-zcx"/>
+                            <constraint firstAttribute="trailing" secondItem="LPq-jc-AGL" secondAttribute="trailing" id="SJr-EE-Z2a"/>
                             <constraint firstAttribute="trailing" secondItem="dcp-hf-DRO" secondAttribute="trailing" id="Tz9-e4-Lga"/>
+                            <constraint firstItem="nJ2-eS-duJ" firstAttribute="top" secondItem="afQ-6h-Rf2" secondAttribute="bottom" constant="8" id="Vj2-iw-E5a"/>
                             <constraint firstItem="dcp-hf-DRO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="W1P-Rh-t9e"/>
                             <constraint firstAttribute="trailing" secondItem="nJ2-eS-duJ" secondAttribute="trailing" id="fnh-Cv-HFp"/>
+                            <constraint firstItem="afQ-6h-Rf2" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="smr-kE-ekC"/>
                             <constraint firstItem="dcp-hf-DRO" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="yAN-JO-bWY"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="filterCollectionView" destination="nJ2-eS-duJ" id="oFw-vM-p8x"/>
                         <outlet property="imageView" destination="dcp-hf-DRO" id="Nud-cw-IDM"/>
+                        <outlet property="unfilteredImageView" destination="LPq-jc-AGL" id="qKX-36-jlC"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
         <!--Navigation Controller-->

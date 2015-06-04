@@ -28,10 +28,10 @@
     [super viewDidLoad];
     
     imagePickerController = [[UIImagePickerController alloc] init];
-//    imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
     imagePickerController.delegate = self;
 
-//    imagePickerController.showsCameraControls = NO;
+    imagePickerController.showsCameraControls = NO;
    
     [self.view addSubview:imagePickerController.view];
     
@@ -49,7 +49,7 @@
     
     
     
-    UIButton* toggleCamera = [[[UIButton alloc] init] initWithFrame:CGRectMake((SCREEN_WIDTH * 0.75) - 25, 0, 50, 50)];
+    UIButton* toggleCamera = [[UIButton alloc] initWithFrame:CGRectMake((SCREEN_WIDTH * 0.75) - 25, 0, 50, 50)];
     
 //    toggleCamera.center.y = takeButton.center.y;
     toggleCamera.center = CGPointMake(toggleCamera.center.x, takeButton.center.y);
