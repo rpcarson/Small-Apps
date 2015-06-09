@@ -47,7 +47,7 @@ class AlbumCollectionViewController: UICollectionViewController,  UICollectionVi
         
         var requestManager = AFHTTPRequestOperationManager()
         
-        requestManager.GET(itunesAPI + "?entity=album&term=\(arteests)", parameters: nil, success: { (request, data) -> Void in
+        requestManager.GET(itunesAPI + "?entity=album&term=Radiohead", parameters: nil, success: { (request, data) -> Void in
             
             let info = data as! [String:AnyObject]
             
