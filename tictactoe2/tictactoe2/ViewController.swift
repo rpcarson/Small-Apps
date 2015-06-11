@@ -9,11 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    
-    
-    
-    
+
     
     @IBOutlet weak var playerIndicator: UILabel!
         
@@ -24,10 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var displayWinner: UILabel!
     
     var winnerIsFound: Bool = false
-    
 
-    
-    
     var spaces: [[Player?]] = [
     
         [nil, nil, nil],
@@ -39,9 +32,9 @@ class ViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         playAgain.hidden = true
+   
     }
 
 
@@ -49,15 +42,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func buttonPressed(sender: ticbutton) {
-        
- 
-        
-        
-        
-        
-        
-        
-        
+
         if winnerIsFound == false {
         
             if sender.player != nil { return }
@@ -200,7 +185,9 @@ class ViewController: UIViewController {
         
         
         println("wtf how do i reset game")
+        
         loadView()
+        
         playAgain.hidden = true
         
         winnerIsFound = false
