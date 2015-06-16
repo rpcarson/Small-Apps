@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B119FF41B2F584000AF1D94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B119FF31B2F584000AF1D94 /* AppDelegate.swift */; };
+		5B119FF61B2F584000AF1D94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B119FF51B2F584000AF1D94 /* ViewController.swift */; };
+		5B119FF91B2F584000AF1D94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B119FF71B2F584000AF1D94 /* Main.storyboard */; };
+		5B119FFB1B2F584000AF1D94 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B119FFA1B2F584000AF1D94 /* Images.xcassets */; };
+		5B119FFE1B2F584000AF1D94 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B119FFC1B2F584000AF1D94 /* LaunchScreen.xib */; };
+		5B11A00A1B2F584000AF1D94 /* TallFeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B11A0091B2F584000AF1D94 /* TallFeatherTests.swift */; };
+		5B11A0141B2F58B000AF1D94 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B11A0131B2F58B000AF1D94 /* Firebase.framework */; };
+		5B11A0161B2F590600AF1D94 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B11A0151B2F590600AF1D94 /* libicucore.dylib */; };
+		5B11A0181B2F591000AF1D94 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B11A0171B2F591000AF1D94 /* libc++.dylib */; };
+		5B11A01A1B2F591A00AF1D94 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B11A0191B2F591A00AF1D94 /* CFNetwork.framework */; };
+		5B11A01C1B2F592400AF1D94 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B11A01B1B2F592400AF1D94 /* Security.framework */; };
+		5B11A01E1B2F593A00AF1D94 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B11A01D1B2F593A00AF1D94 /* SystemConfiguration.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B11A0041B2F584000AF1D94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B119FE61B2F584000AF1D94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B119FED1B2F584000AF1D94;
+			remoteInfo = TallFeather;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5B119FEE1B2F584000AF1D94 /* TallFeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TallFeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B119FF21B2F584000AF1D94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B119FF31B2F584000AF1D94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5B119FF51B2F584000AF1D94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5B119FF81B2F584000AF1D94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5B119FFA1B2F584000AF1D94 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5B119FFD1B2F584000AF1D94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5B11A0031B2F584000AF1D94 /* TallFeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TallFeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B11A0081B2F584000AF1D94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B11A0091B2F584000AF1D94 /* TallFeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TallFeatherTests.swift; sourceTree = "<group>"; };
+		5B11A0131B2F58B000AF1D94 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		5B11A0151B2F590600AF1D94 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		5B11A0171B2F591000AF1D94 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		5B11A0191B2F591A00AF1D94 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		5B11A01B1B2F592400AF1D94 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		5B11A01D1B2F593A00AF1D94 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5B11A01F1B2F59FB00AF1D94 /* TallFeather-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TallFeather-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B119FEB1B2F584000AF1D94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B11A01E1B2F593A00AF1D94 /* SystemConfiguration.framework in Frameworks */,
+				5B11A01C1B2F592400AF1D94 /* Security.framework in Frameworks */,
+				5B11A01A1B2F591A00AF1D94 /* CFNetwork.framework in Frameworks */,
+				5B11A0181B2F591000AF1D94 /* libc++.dylib in Frameworks */,
+				5B11A0161B2F590600AF1D94 /* libicucore.dylib in Frameworks */,
+				5B11A0141B2F58B000AF1D94 /* Firebase.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B11A0001B2F584000AF1D94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B119FE51B2F584000AF1D94 = {
+			isa = PBXGroup;
+			children = (
+				5B11A01D1B2F593A00AF1D94 /* SystemConfiguration.framework */,
+				5B11A01B1B2F592400AF1D94 /* Security.framework */,
+				5B11A0191B2F591A00AF1D94 /* CFNetwork.framework */,
+				5B11A0171B2F591000AF1D94 /* libc++.dylib */,
+				5B11A0151B2F590600AF1D94 /* libicucore.dylib */,
+				5B119FF01B2F584000AF1D94 /* TallFeather */,
+				5B11A0061B2F584000AF1D94 /* TallFeatherTests */,
+				5B119FEF1B2F584000AF1D94 /* Products */,
+				5B11A01F1B2F59FB00AF1D94 /* TallFeather-Bridging-Header.h */,
+			);
+			sourceTree = "<group>";
+		};
+		5B119FEF1B2F584000AF1D94 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B119FEE1B2F584000AF1D94 /* TallFeather.app */,
+				5B11A0031B2F584000AF1D94 /* TallFeatherTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B119FF01B2F584000AF1D94 /* TallFeather */ = {
+			isa = PBXGroup;
+			children = (
+				5B119FF31B2F584000AF1D94 /* AppDelegate.swift */,
+				5B119FF51B2F584000AF1D94 /* ViewController.swift */,
+				5B119FF71B2F584000AF1D94 /* Main.storyboard */,
+				5B119FFA1B2F584000AF1D94 /* Images.xcassets */,
+				5B119FFC1B2F584000AF1D94 /* LaunchScreen.xib */,
+				5B119FF11B2F584000AF1D94 /* Supporting Files */,
+			);
+			path = TallFeather;
+			sourceTree = "<group>";
+		};
+		5B119FF11B2F584000AF1D94 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B11A0131B2F58B000AF1D94 /* Firebase.framework */,
+				5B119FF21B2F584000AF1D94 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5B11A0061B2F584000AF1D94 /* TallFeatherTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B11A0091B2F584000AF1D94 /* TallFeatherTests.swift */,
+				5B11A0071B2F584000AF1D94 /* Supporting Files */,
+			);
+			path = TallFeatherTests;
+			sourceTree = "<group>";
+		};
+		5B11A0071B2F584000AF1D94 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B11A0081B2F584000AF1D94 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B119FED1B2F584000AF1D94 /* TallFeather */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B11A00D1B2F584000AF1D94 /* Build configuration list for PBXNativeTarget "TallFeather" */;
+			buildPhases = (
+				5B119FEA1B2F584000AF1D94 /* Sources */,
+				5B119FEB1B2F584000AF1D94 /* Frameworks */,
+				5B119FEC1B2F584000AF1D94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TallFeather;
+			productName = TallFeather;
+			productReference = 5B119FEE1B2F584000AF1D94 /* TallFeather.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B11A0021B2F584000AF1D94 /* TallFeatherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B11A0101B2F584000AF1D94 /* Build configuration list for PBXNativeTarget "TallFeatherTests" */;
+			buildPhases = (
+				5B119FFF1B2F584000AF1D94 /* Sources */,
+				5B11A0001B2F584000AF1D94 /* Frameworks */,
+				5B11A0011B2F584000AF1D94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B11A0051B2F584000AF1D94 /* PBXTargetDependency */,
+			);
+			name = TallFeatherTests;
+			productName = TallFeatherTests;
+			productReference = 5B11A0031B2F584000AF1D94 /* TallFeatherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B119FE61B2F584000AF1D94 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Reed Carson";
+				TargetAttributes = {
+					5B119FED1B2F584000AF1D94 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					5B11A0021B2F584000AF1D94 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 5B119FED1B2F584000AF1D94;
+					};
+				};
+			};
+			buildConfigurationList = 5B119FE91B2F584000AF1D94 /* Build configuration list for PBXProject "TallFeather" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B119FE51B2F584000AF1D94;
+			productRefGroup = 5B119FEF1B2F584000AF1D94 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B119FED1B2F584000AF1D94 /* TallFeather */,
+				5B11A0021B2F584000AF1D94 /* TallFeatherTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B119FEC1B2F584000AF1D94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B119FF91B2F584000AF1D94 /* Main.storyboard in Resources */,
+				5B119FFE1B2F584000AF1D94 /* LaunchScreen.xib in Resources */,
+				5B119FFB1B2F584000AF1D94 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B11A0011B2F584000AF1D94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B119FEA1B2F584000AF1D94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B119FF61B2F584000AF1D94 /* ViewController.swift in Sources */,
+				5B119FF41B2F584000AF1D94 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B119FFF1B2F584000AF1D94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B11A00A1B2F584000AF1D94 /* TallFeatherTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B11A0051B2F584000AF1D94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B119FED1B2F584000AF1D94 /* TallFeather */;
+			targetProxy = 5B11A0041B2F584000AF1D94 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5B119FF71B2F584000AF1D94 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B119FF81B2F584000AF1D94 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5B119FFC1B2F584000AF1D94 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B119FFD1B2F584000AF1D94 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B11A00B1B2F584000AF1D94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5B11A00C1B2F584000AF1D94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B11A00E1B2F584000AF1D94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TallFeather",
+				);
+				INFOPLIST_FILE = TallFeather/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TallFeather-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5B11A00F1B2F584000AF1D94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TallFeather",
+				);
+				INFOPLIST_FILE = TallFeather/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TallFeather-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		5B11A0111B2F584000AF1D94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TallFeatherTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TallFeather.app/TallFeather";
+			};
+			name = Debug;
+		};
+		5B11A0121B2F584000AF1D94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TallFeatherTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TallFeather.app/TallFeather";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B119FE91B2F584000AF1D94 /* Build configuration list for PBXProject "TallFeather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B11A00B1B2F584000AF1D94 /* Debug */,
+				5B11A00C1B2F584000AF1D94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B11A00D1B2F584000AF1D94 /* Build configuration list for PBXNativeTarget "TallFeather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B11A00E1B2F584000AF1D94 /* Debug */,
+				5B11A00F1B2F584000AF1D94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5B11A0101B2F584000AF1D94 /* Build configuration list for PBXNativeTarget "TallFeatherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B11A0111B2F584000AF1D94 /* Debug */,
+				5B11A0121B2F584000AF1D94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B119FE61B2F584000AF1D94 /* Project object */;
+}
