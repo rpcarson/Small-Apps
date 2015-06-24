@@ -1,0 +1,432 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5BBC16781B3AF3CC0094FD32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC16771B3AF3CC0094FD32 /* AppDelegate.swift */; };
+		5BBC167A1B3AF3CC0094FD32 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5BBC16791B3AF3CC0094FD32 /* GameScene.sks */; };
+		5BBC167C1B3AF3CC0094FD32 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC167B1B3AF3CC0094FD32 /* GameScene.swift */; };
+		5BBC167E1B3AF3CC0094FD32 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC167D1B3AF3CC0094FD32 /* GameViewController.swift */; };
+		5BBC16811B3AF3CC0094FD32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BBC167F1B3AF3CC0094FD32 /* Main.storyboard */; };
+		5BBC16831B3AF3CC0094FD32 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BBC16821B3AF3CC0094FD32 /* Images.xcassets */; };
+		5BBC16861B3AF3CC0094FD32 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BBC16841B3AF3CC0094FD32 /* LaunchScreen.xib */; };
+		5BBC16921B3AF3CC0094FD32 /* FrostByteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC16911B3AF3CC0094FD32 /* FrostByteTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5BBC168C1B3AF3CC0094FD32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BBC166A1B3AF3CC0094FD32 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BBC16711B3AF3CC0094FD32;
+			remoteInfo = FrostByte;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5BBC16721B3AF3CC0094FD32 /* FrostByte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrostByte.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BBC16761B3AF3CC0094FD32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BBC16771B3AF3CC0094FD32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5BBC16791B3AF3CC0094FD32 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		5BBC167B1B3AF3CC0094FD32 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		5BBC167D1B3AF3CC0094FD32 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		5BBC16801B3AF3CC0094FD32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5BBC16821B3AF3CC0094FD32 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5BBC16851B3AF3CC0094FD32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5BBC168B1B3AF3CC0094FD32 /* FrostByteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrostByteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BBC16901B3AF3CC0094FD32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BBC16911B3AF3CC0094FD32 /* FrostByteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrostByteTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5BBC166F1B3AF3CC0094FD32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BBC16881B3AF3CC0094FD32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5BBC16691B3AF3CC0094FD32 = {
+			isa = PBXGroup;
+			children = (
+				5BBC16741B3AF3CC0094FD32 /* FrostByte */,
+				5BBC168E1B3AF3CC0094FD32 /* FrostByteTests */,
+				5BBC16731B3AF3CC0094FD32 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5BBC16731B3AF3CC0094FD32 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BBC16721B3AF3CC0094FD32 /* FrostByte.app */,
+				5BBC168B1B3AF3CC0094FD32 /* FrostByteTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5BBC16741B3AF3CC0094FD32 /* FrostByte */ = {
+			isa = PBXGroup;
+			children = (
+				5BBC16771B3AF3CC0094FD32 /* AppDelegate.swift */,
+				5BBC16791B3AF3CC0094FD32 /* GameScene.sks */,
+				5BBC167B1B3AF3CC0094FD32 /* GameScene.swift */,
+				5BBC167D1B3AF3CC0094FD32 /* GameViewController.swift */,
+				5BBC167F1B3AF3CC0094FD32 /* Main.storyboard */,
+				5BBC16821B3AF3CC0094FD32 /* Images.xcassets */,
+				5BBC16841B3AF3CC0094FD32 /* LaunchScreen.xib */,
+				5BBC16751B3AF3CC0094FD32 /* Supporting Files */,
+			);
+			path = FrostByte;
+			sourceTree = "<group>";
+		};
+		5BBC16751B3AF3CC0094FD32 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5BBC16761B3AF3CC0094FD32 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5BBC168E1B3AF3CC0094FD32 /* FrostByteTests */ = {
+			isa = PBXGroup;
+			children = (
+				5BBC16911B3AF3CC0094FD32 /* FrostByteTests.swift */,
+				5BBC168F1B3AF3CC0094FD32 /* Supporting Files */,
+			);
+			path = FrostByteTests;
+			sourceTree = "<group>";
+		};
+		5BBC168F1B3AF3CC0094FD32 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5BBC16901B3AF3CC0094FD32 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5BBC16711B3AF3CC0094FD32 /* FrostByte */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BBC16951B3AF3CC0094FD32 /* Build configuration list for PBXNativeTarget "FrostByte" */;
+			buildPhases = (
+				5BBC166E1B3AF3CC0094FD32 /* Sources */,
+				5BBC166F1B3AF3CC0094FD32 /* Frameworks */,
+				5BBC16701B3AF3CC0094FD32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FrostByte;
+			productName = FrostByte;
+			productReference = 5BBC16721B3AF3CC0094FD32 /* FrostByte.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5BBC168A1B3AF3CC0094FD32 /* FrostByteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BBC16981B3AF3CC0094FD32 /* Build configuration list for PBXNativeTarget "FrostByteTests" */;
+			buildPhases = (
+				5BBC16871B3AF3CC0094FD32 /* Sources */,
+				5BBC16881B3AF3CC0094FD32 /* Frameworks */,
+				5BBC16891B3AF3CC0094FD32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BBC168D1B3AF3CC0094FD32 /* PBXTargetDependency */,
+			);
+			name = FrostByteTests;
+			productName = FrostByteTests;
+			productReference = 5BBC168B1B3AF3CC0094FD32 /* FrostByteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5BBC166A1B3AF3CC0094FD32 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Reed Carson";
+				TargetAttributes = {
+					5BBC16711B3AF3CC0094FD32 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					5BBC168A1B3AF3CC0094FD32 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 5BBC16711B3AF3CC0094FD32;
+					};
+				};
+			};
+			buildConfigurationList = 5BBC166D1B3AF3CC0094FD32 /* Build configuration list for PBXProject "FrostByte" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5BBC16691B3AF3CC0094FD32;
+			productRefGroup = 5BBC16731B3AF3CC0094FD32 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5BBC16711B3AF3CC0094FD32 /* FrostByte */,
+				5BBC168A1B3AF3CC0094FD32 /* FrostByteTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5BBC16701B3AF3CC0094FD32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BBC16861B3AF3CC0094FD32 /* LaunchScreen.xib in Resources */,
+				5BBC16831B3AF3CC0094FD32 /* Images.xcassets in Resources */,
+				5BBC167A1B3AF3CC0094FD32 /* GameScene.sks in Resources */,
+				5BBC16811B3AF3CC0094FD32 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BBC16891B3AF3CC0094FD32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5BBC166E1B3AF3CC0094FD32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BBC167C1B3AF3CC0094FD32 /* GameScene.swift in Sources */,
+				5BBC167E1B3AF3CC0094FD32 /* GameViewController.swift in Sources */,
+				5BBC16781B3AF3CC0094FD32 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BBC16871B3AF3CC0094FD32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BBC16921B3AF3CC0094FD32 /* FrostByteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5BBC168D1B3AF3CC0094FD32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BBC16711B3AF3CC0094FD32 /* FrostByte */;
+			targetProxy = 5BBC168C1B3AF3CC0094FD32 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5BBC167F1B3AF3CC0094FD32 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BBC16801B3AF3CC0094FD32 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5BBC16841B3AF3CC0094FD32 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BBC16851B3AF3CC0094FD32 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5BBC16931B3AF3CC0094FD32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5BBC16941B3AF3CC0094FD32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5BBC16961B3AF3CC0094FD32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FrostByte/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5BBC16971B3AF3CC0094FD32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FrostByte/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5BBC16991B3AF3CC0094FD32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FrostByteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FrostByte.app/FrostByte";
+			};
+			name = Debug;
+		};
+		5BBC169A1B3AF3CC0094FD32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FrostByteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FrostByte.app/FrostByte";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5BBC166D1B3AF3CC0094FD32 /* Build configuration list for PBXProject "FrostByte" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BBC16931B3AF3CC0094FD32 /* Debug */,
+				5BBC16941B3AF3CC0094FD32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BBC16951B3AF3CC0094FD32 /* Build configuration list for PBXNativeTarget "FrostByte" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BBC16961B3AF3CC0094FD32 /* Debug */,
+				5BBC16971B3AF3CC0094FD32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5BBC16981B3AF3CC0094FD32 /* Build configuration list for PBXNativeTarget "FrostByteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BBC16991B3AF3CC0094FD32 /* Debug */,
+				5BBC169A1B3AF3CC0094FD32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5BBC166A1B3AF3CC0094FD32 /* Project object */;
+}
