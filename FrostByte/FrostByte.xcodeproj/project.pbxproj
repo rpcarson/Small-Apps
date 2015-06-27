@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B785B701B3C3A2F00DE6B0B /* snowman.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 5B785B6F1B3C3A2F00DE6B0B /* snowman.atlas */; };
 		5BBC16781B3AF3CC0094FD32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC16771B3AF3CC0094FD32 /* AppDelegate.swift */; };
 		5BBC167A1B3AF3CC0094FD32 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5BBC16791B3AF3CC0094FD32 /* GameScene.sks */; };
 		5BBC167C1B3AF3CC0094FD32 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC167B1B3AF3CC0094FD32 /* GameScene.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B785B6F1B3C3A2F00DE6B0B /* snowman.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = snowman.atlas; path = FrostByte/snowman.atlas; sourceTree = "<group>"; };
 		5BBC16721B3AF3CC0094FD32 /* FrostByte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrostByte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BBC16761B3AF3CC0094FD32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BBC16771B3AF3CC0094FD32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 		5BBC16691B3AF3CC0094FD32 = {
 			isa = PBXGroup;
 			children = (
+				5B785B6F1B3C3A2F00DE6B0B /* snowman.atlas */,
 				5BBC16741B3AF3CC0094FD32 /* FrostByte */,
 				5BBC168E1B3AF3CC0094FD32 /* FrostByteTests */,
 				5BBC16731B3AF3CC0094FD32 /* Products */,
@@ -201,6 +204,7 @@
 				5BBC16861B3AF3CC0094FD32 /* LaunchScreen.xib in Resources */,
 				5BBC16831B3AF3CC0094FD32 /* Images.xcassets in Resources */,
 				5BBC167A1B3AF3CC0094FD32 /* GameScene.sks in Resources */,
+				5B785B701B3C3A2F00DE6B0B /* snowman.atlas in Resources */,
 				5BBC16811B3AF3CC0094FD32 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +421,7 @@
 				5BBC16971B3AF3CC0094FD32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5BBC16981B3AF3CC0094FD32 /* Build configuration list for PBXNativeTarget "FrostByteTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +430,7 @@
 				5BBC169A1B3AF3CC0094FD32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

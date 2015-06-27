@@ -11,7 +11,7 @@ import SpriteKit
 class GameScene: SKScene {
     
    
-    
+    var ballSize: CGFloat = 20
     
     var snowman: SKSpriteNode!
     
@@ -20,14 +20,34 @@ class GameScene: SKScene {
       
         snowman = childNodeWithName("snowman") as! SKSpriteNode
         
-        
-        
         buildLayout(stageLayout)
         
+        let atlas = SKTextureAtlas(named: "snowman")
+        
+        var textures: [SKTexture] = []
+        
+//        for textureName in atlas.textureNames as! [String] {
+        
+        for i in 0..<atlas.textureNames.count {
+        
+        let texture = SKTexture(imageNamed: "snowman\(i)")
+            
+            println("snowman\(i)")
+            
+            textures.append(texture)
+            
+        }
+        
+        let action = SKAction.animateWithTextures(textures, timePerFrame: 0.1)
+        
+        let forever = SKAction.repeatActionForever(action)
+        
+        snowman.runAction(forever)
+//
         
     }
     
-    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
   
         for touch in (touches as! Set<UITouch>) {
            
@@ -35,14 +55,16 @@ class GameScene: SKScene {
             
             snowmanhead.fillColor = UIColor.yellowColor()
             
-           snowmanhead.physicsBody?.mass = 1000
+         
             
             snowmanhead.physicsBody = SKPhysicsBody(circleOfRadius: 10)
+            
+              snowmanhead.physicsBody?.mass = 1
          
             snowmanhead.position = CGPointMake(100, 100)
             addChild(snowmanhead)
             
-            snowmanhead.physicsBody?.applyImpulse(CGVectorMake(25, 1))
+            snowmanhead.physicsBody?.applyImpulse(CGVectorMake(10000, 100))
             
         }
     }
@@ -82,7 +104,10 @@ class GameScene: SKScene {
     }
    
     override func update(currentTime: CFTimeInterval) {
-        /* Called before each frame is rendered */
+       
+        
+        
+        
     }
 }
 
