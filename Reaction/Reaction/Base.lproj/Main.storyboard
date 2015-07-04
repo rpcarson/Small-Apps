@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6n3-Vc-aE6" customClass="CircleButton" customModule="Reaction" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6n3-Vc-aE6" customClass="CircleButton" customModule="Reaction" customModuleProvider="target">
                                 <rect key="frame" x="200" y="200" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="8xZ-zt-KcU"/>
@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="width" constant="200" id="awM-sJ-UhU"/>
                                     <constraint firstAttribute="width" constant="200" id="eUZ-pg-jdQ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="40"/>
                                 <state key="normal" title="GO">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -38,22 +38,41 @@
                                     <action selector="goButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CBV-r3-zgJ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuL-2b-tza">
-                                <rect key="frame" x="137" y="483" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuL-2b-tza">
+                                <rect key="frame" x="251" y="470" width="98" height="91"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="91" id="6Me-Ob-roE"/>
+                                    <constraint firstAttribute="width" constant="98" id="Ktm-SV-Zs3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="50"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVW-wX-sUC">
+                                <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showLeaderboard:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6AT-q7-cXs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="KuL-2b-tza" secondAttribute="trailing" constant="251" id="P6z-Z6-bC7"/>
+                            <constraint firstAttribute="centerY" secondItem="6n3-Vc-aE6" secondAttribute="centerY" id="PHm-DU-fsy"/>
                             <constraint firstAttribute="trailing" secondItem="6n3-Vc-aE6" secondAttribute="trailing" constant="200" id="QB0-cH-5W8"/>
+                            <constraint firstItem="KuL-2b-tza" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="251" id="YUR-aI-SXx"/>
+                            <constraint firstAttribute="centerX" secondItem="6n3-Vc-aE6" secondAttribute="centerX" id="kzy-Xr-gJt"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="KuL-2b-tza" secondAttribute="bottom" constant="39" id="njC-Me-L3r"/>
                             <constraint firstAttribute="centerX" secondItem="6n3-Vc-aE6" secondAttribute="centerX" id="vhN-ws-9W2"/>
                             <constraint firstItem="6n3-Vc-aE6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="200" id="w0V-ML-mzz"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="QB0-cH-5W8"/>
+                                <exclude reference="vhN-ws-9W2"/>
                                 <exclude reference="w0V-ML-mzz"/>
                             </mask>
                         </variation>
