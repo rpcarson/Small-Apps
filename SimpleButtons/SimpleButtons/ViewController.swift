@@ -15,35 +15,30 @@ let numberFormatter = NSNumberFormatter()
 
 class ViewController: UIViewController {
     
-    
     var firstNumber = ""
     
     var secondNumber = ""
     
     var currentOperation = ""
     
+    var calculatedNumber = ""
+    
+    var currentNumber = ""
+    
+    var currentNum1 = ""
+    
+    
     
     @IBOutlet weak var Label: UILabel!
-    
-    @IBOutlet weak var first: UILabel!
-    
-    @IBOutlet weak var op: UILabel!
-    
-    @IBOutlet weak var sec: UILabel!
-    
-    
-    
     
     @IBAction func Clear(sender: UIButton) {
         
         Label.text = ""
-        op.text = ""
-        first.text = ""
-        sec.text = ""
         
         firstNumber = ""
         secondNumber = ""
         currentOperation = ""
+        
     }
     
     
@@ -58,54 +53,137 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func ButtonPress(sender: UIButton) {
+    
+    @IBAction func invertValue(sender: UIButton) {
         
-        var firstNumArray: [String] = []
-        var secNumArray: [String]   = []
+        var currentNum1 = numberFormatter.numberFromString("\(currentNumber)")
         
-        
-        let number = sender.currentTitle!
-        
-        
-        if currentOperation.isEmpty {
+        if currentNumber == firstNumber {
             
-            firstNumber += number
-           
-        }
-        else
-        {
+            if currentNum1 != nil {
+                
+                var numberFloat = currentNum1!.doubleValue
+                
+                numberFloat = numberFloat * -1
+                
+                if numberFloat % 1 == 0 {
+                    
+                    let formattedValue = String(format: "%.0f", numberFloat)
+                    
+                    firstNumber = "\(formattedValue)"
+                    
+                    println(numberFloat)
+                    
+                } else {
+                    
+                    firstNumber = "\(numberFloat)"
+                    
+                    println(numberFloat)
+
+                    
+                }
+                
+                
+                Label.text = firstNumber
+                
+                currentNumber = firstNumber
+                
+            }
             
-            secondNumber += number
-        
-        secNumArray.append(number)
-        
         }
         
-//        println(sender.currentTitle!)
-        
-        first.text = firstNumber
-        sec.text = secondNumber
-        
-        println("second number = \(secondNumber)")
-        println("first number = \(firstNumber)")
-        println(firstNumArray.count)
-        println(secNumArray.count)
-
-
+        if currentNumber == secondNumber {
+            
+            if currentNum1 != nil {
+                
+                var numberFloat = currentNum1!.floatValue
+                
+                numberFloat = numberFloat * -1
+                
+                if numberFloat % 1 == 0 {
+                    
+                    let formattedValue = String(format: "%.0f", numberFloat)
+                    
+                    secondNumber = "\(formattedValue)"
+                    
+                } else {
+                    
+                    secondNumber = "\(numberFloat)"
+                    
+                }
+                
+                Label.text = "\(firstNumber) \(currentOperation) \(secondNumber)"
+                
+                currentNumber = secondNumber
+                
+            }
+        }
         
     }
     
     
-
+    @IBAction func ButtonPress(sender: UIButton) {
+        
+        
+        println(currentNum1)
+        
+        let number = sender.currentTitle!
+        
+        if currentOperation.isEmpty {
+            
+            if calculatedNumber != "" {
+                
+                calculatedNumber = ""
+                firstNumber = ""
+                
+            }
+            
+            firstNumber += number
+            
+            currentNumber = firstNumber
+            
+            Label.text = currentNumber
+            
+            println(currentNumber)
+            
+        }
+            
+        else
+            
+        {
+            
+            secondNumber += number
+            
+            Label.text = "\(firstNumber) \(currentOperation) \(secondNumber)"
+            
+            currentNumber = secondNumber
+            
+            println(currentNumber)
+            
+        }
+        
+        
+        println("second number = \(secondNumber)")
+        println("first number = \(firstNumber)")
+        
+        
+    }
     
     @IBAction func Operation(sender: UIButton) {
         
+        if firstNumber == "." {
+            
+            firstNumber = "0.0"
+            
+        }
         
+        if secondNumber == "." {
+            
+            secondNumber = "0.0"
+        }
         
         let number1 = numberFormatter.numberFromString("\(firstNumber)")
         let number2 = numberFormatter.numberFromString("\(secondNumber)")
-        
-
         
         let operation = sender.currentTitle!
         
@@ -113,9 +191,13 @@ class ViewController: UIViewController {
         
         if operation != "=" {
             
-            currentOperation = operation
-            
-            op.text = operation
+            if firstNumber != "" {
+                
+                currentOperation = operation
+                
+                Label.text = "\(firstNumber) \(currentOperation) \(secondNumber)"
+                
+            }
             
         }
             
@@ -128,59 +210,129 @@ class ViewController: UIViewController {
                 
             case "+":
                 
-                let numberFloat1 = number1!.floatValue
-                
-                let numberFloat2 = number2!.floatValue
-                
-                let val3 = numberFloat1 + numberFloat2
-                
-                let value = String(format: "%.5f", val3)
-                
-                Label.text = "\(value)"
-                
-                println("\(firstNumber) \(currentOperation) \(secondNumber) = \(value)")
+                if secondNumber != "" {
+                    
+                    let numberFloat1 = number1!.doubleValue
+                    
+                    let numberFloat2 = number2!.doubleValue
+                    
+                    let val3 = numberFloat1 + numberFloat2
+                    
+                    if val3 % 1 == 0 {
+                        
+                        let formattedValue = String(format: "%.0f", val3)
+                        
+                        Label.text = "\(formattedValue)"
+                        
+                    } else {
+                        
+                        Label.text = "\(val3)"
+
+                    }
+                    
+                    println("\(firstNumber) \(currentOperation) \(secondNumber) = \(val3)")
+                    
+                    calculatedNumber = "\(val3)"
+                    
+                    firstNumber = "\(val3)"
+                    secondNumber = ""
+                    currentOperation = ""
+                    
+                }
                 
             case "-":
                 
-                let numberFloat1 = number1!.floatValue
-                
-                let numberFloat2 = number2!.floatValue
-                
-                let val3 = numberFloat1 - numberFloat2
-                
-                let value = String(format: "%.5f", val3)
-                
-                Label.text = "\(value)"
-                
-                println("\(firstNumber) \(currentOperation) \(secondNumber) = \(value)")
+                if secondNumber != "" {
+                    
+                    let numberFloat1 = number1!.doubleValue
+                    
+                    let numberFloat2 = number2!.doubleValue
+                    
+                    let val3 = numberFloat1 - numberFloat2
+                    
+                    if val3 % 1 == 0 {
+                        
+                        let formattedValue = String(format: "%.0f", val3)
+                        
+                        Label.text = "\(formattedValue)"
+                        
+                    } else {
+                        
+                        Label.text = "\(val3)"
+                        
+                    }
+                    
+                    println("\(firstNumber) \(currentOperation) \(secondNumber) = \(val3)")
+                    
+                    calculatedNumber = "\(val3)"
+                    firstNumber = "\(val3)"
+                    secondNumber = ""
+                    currentOperation = ""
+                    
+                }
                 
             case "X":
                 
-                let numberFloat1 = number1!.floatValue
-                
-                let numberFloat2 = number2!.floatValue
-                
-                let val3 = numberFloat1 * numberFloat2
-                
-                let value = String(format: "%.5f", val3)
-                
-                Label.text = "\(value)"
-
-                println("\(firstNumber) \(currentOperation) \(secondNumber) = \(value)")
+                if secondNumber != "" {
+                    
+                    let numberFloat1 = number1!.doubleValue
+                    
+                    let numberFloat2 = number2!.doubleValue
+                    
+                    let val3 = numberFloat1 * numberFloat2
+                    
+                    if val3 % 1 == 0 {
+                        
+                        let formattedValue = String(format: "%.0f", val3)
+                        
+                        Label.text = "\(formattedValue)"
+                        
+                    } else {
+                        
+                        Label.text = "\(val3)"
+                        
+                    }
+                    
+                    println("\(firstNumber) \(currentOperation) \(secondNumber) = \(val3)")
+                    
+                    calculatedNumber = "\(val3)"
+                    firstNumber = "\(val3)"
+                    secondNumber = ""
+                    currentOperation = ""
+                    
+                }
                 
             case "÷":
                 
-                let numberFloat1 = number1!.floatValue
-               
-                let numberFloat2 = number2!.floatValue
-                
-                let val3 = numberFloat1 / numberFloat2
-                
-                let value = String(format: "%.5f", val3)
+                if secondNumber != "" {
+                    
+                    let numberFloat1 = number1!.doubleValue
+                    
+                    let numberFloat2 = number2!.doubleValue
+                    
+                    let val3 = numberFloat1 / numberFloat2
+                    
+                    if val3 % 1 == 0 {
+                        
+                        let formattedValue = String(format: "%.0f", val3)
 
-                Label.text = "\(value)"
+                        Label.text = "\(formattedValue)"
+
+                    } else {
+                    
+                    Label.text = "\(val3)"
+                        
+                    }
+                    
+                    println("\(firstNumber) \(currentOperation) \(secondNumber) = \(val3)")
+                    
+                    calculatedNumber = "\(val3)"
+                    firstNumber = "\(val3)"
+                    secondNumber = ""
+                    currentOperation = ""
+                    
+                }
                 
-                println("\(firstNumber) \(currentOperation) \(secondNumber) = \(value)")
                 
             default :
                 
@@ -188,26 +340,9 @@ class ViewController: UIViewController {
                 
             }
             
-            firstNumber = ""
-            secondNumber = ""
-            currentOperation = ""
-            
-            first.text = ""
-            sec.text = ""
-            op.text = ""
-            
-            
         }
-        
-        
-        
         
     }
     
-    
-    
-    
 }
-
-
 
