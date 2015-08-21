@@ -13,8 +13,8 @@ class ViewController: UIViewController {
     
        var view2 = UIView(frame: CGRectMake(150, 150, 100, 100))
     
-    view2.addSubview(view2)
-      view2.backgroundColor = UIColor.redColor()
+//      addSubview(view2)
+//      view2.backgroundColor = UIColor.redColor()
     
     
     override func viewDidLoad() {
@@ -97,5 +97,5 @@ class ViewController: UIViewController {
 
 
 
-
+}
 

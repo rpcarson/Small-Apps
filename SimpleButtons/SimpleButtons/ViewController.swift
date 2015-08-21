@@ -28,7 +28,6 @@ class ViewController: UIViewController {
     var currentNum1 = ""
     
     
-    
     @IBOutlet weak var Label: UILabel!
     
     @IBAction func Clear(sender: UIButton) {
@@ -52,6 +51,32 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func backSpace(sender: UIButton) {
+        
+        
+        if currentNumber.isEmpty { return }
+        
+        
+        if currentNumber == firstNumber {
+        
+            currentNumber = dropLast(currentNumber)
+    
+            firstNumber = currentNumber
+            
+            Label.text = firstNumber
+            
+        } else {
+            
+            currentNumber = dropLast(currentNumber)
+            
+            secondNumber = currentNumber
+            
+            Label.text = "\(firstNumber) \(currentOperation) \(secondNumber)"
+            
+        }
+        
+    }
     
     
     @IBAction func invertValue(sender: UIButton) {
@@ -96,7 +121,7 @@ class ViewController: UIViewController {
             
             if currentNum1 != nil {
                 
-                var numberFloat = currentNum1!.floatValue
+                var numberFloat = currentNum1!.doubleValue
                 
                 numberFloat = numberFloat * -1
                 
@@ -128,6 +153,12 @@ class ViewController: UIViewController {
         println(currentNum1)
         
         let number = sender.currentTitle!
+        
+        if sender.currentTitle == "." && (currentNumber.rangeOfString(".") != nil) {
+            
+                return
+        
+        }
         
         if currentOperation.isEmpty {
             
@@ -208,6 +239,45 @@ class ViewController: UIViewController {
                 
             {
                 
+            case "%":
+                
+                if secondNumber != "" {
+                    
+                    let numberFloat1 = number1!.doubleValue
+                    
+                    let numberFloat2 = number2!.doubleValue
+                    
+                    let val3 = (numberFloat1 * numberFloat2)/100
+                    
+                    if val3 % 1 == 0 {
+                        
+                        let formattedValue = String(format: "%.0f", val3)
+                        
+                        Label.text = "\(formattedValue)"
+                        calculatedNumber = "\(formattedValue)"
+                        firstNumber = "\(formattedValue)"
+                        
+                    } else {
+                        
+                        Label.text = "\(val3)"
+                        calculatedNumber = "\(val3)"
+                        firstNumber = "\(val3)"
+                        
+                    }
+                    
+                    println("\(firstNumber) \(currentOperation) \(secondNumber) = \(val3)")
+                    
+                    
+                    secondNumber = ""
+                    currentOperation = ""
+                    
+                }
+            
+            
+            
+            
+            
+            
             case "+":
                 
                 if secondNumber != "" {
@@ -223,18 +293,20 @@ class ViewController: UIViewController {
                         let formattedValue = String(format: "%.0f", val3)
                         
                         Label.text = "\(formattedValue)"
+                        calculatedNumber = "\(formattedValue)"
+                        firstNumber = "\(formattedValue)"
                         
                     } else {
                         
                         Label.text = "\(val3)"
+                        calculatedNumber = "\(val3)"
+                        firstNumber = "\(val3)"
 
                     }
                     
                     println("\(firstNumber) \(currentOperation) \(secondNumber) = \(val3)")
                     
-                    calculatedNumber = "\(val3)"
-                    
-                    firstNumber = "\(val3)"
+
                     secondNumber = ""
                     currentOperation = ""
                     
@@ -255,17 +327,20 @@ class ViewController: UIViewController {
                         let formattedValue = String(format: "%.0f", val3)
                         
                         Label.text = "\(formattedValue)"
+                        calculatedNumber = "\(formattedValue)"
+                        firstNumber = "\(formattedValue)"
                         
                     } else {
                         
                         Label.text = "\(val3)"
+                        firstNumber = "\(val3)"
+                        calculatedNumber = "\(val3)"
+
                         
                     }
                     
                     println("\(firstNumber) \(currentOperation) \(secondNumber) = \(val3)")
                     
-                    calculatedNumber = "\(val3)"
-                    firstNumber = "\(val3)"
                     secondNumber = ""
                     currentOperation = ""
                     
@@ -286,17 +361,20 @@ class ViewController: UIViewController {
                         let formattedValue = String(format: "%.0f", val3)
                         
                         Label.text = "\(formattedValue)"
+                        calculatedNumber = "\(formattedValue)"
+                        firstNumber = "\(formattedValue)"
                         
                     } else {
                         
                         Label.text = "\(val3)"
+                        calculatedNumber = "\(val3)"
+                        firstNumber = "\(val3)"
                         
                     }
                     
                     println("\(firstNumber) \(currentOperation) \(secondNumber) = \(val3)")
                     
-                    calculatedNumber = "\(val3)"
-                    firstNumber = "\(val3)"
+           
                     secondNumber = ""
                     currentOperation = ""
                     
@@ -317,17 +395,20 @@ class ViewController: UIViewController {
                         let formattedValue = String(format: "%.0f", val3)
 
                         Label.text = "\(formattedValue)"
+                        calculatedNumber = "\(formattedValue)"
+                        firstNumber = "\(formattedValue)"
 
                     } else {
                     
                     Label.text = "\(val3)"
+                        calculatedNumber = "\(val3)"
+                        firstNumber = "\(val3)"
                         
                     }
                     
                     println("\(firstNumber) \(currentOperation) \(secondNumber) = \(val3)")
                     
-                    calculatedNumber = "\(val3)"
-                    firstNumber = "\(val3)"
+                 
                     secondNumber = ""
                     currentOperation = ""
                     
